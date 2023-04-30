@@ -22,7 +22,7 @@ const Setpost = () => {
 		if (form.prompt) {
 			try {
 				setIsImage(true);
-				const response = await fetch('http://localhost:8000/api/v1/ai', {
+				const response = await fetch('https://backend-openai.onrender.com/api/v1/ai', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const Setpost = () => {
 		if (form.prompt && form.photo) {
 			setLoad(true);
 			try {
-				const resp = await fetch('http://localhost:8000/api/v1/post', {
+				const resp = await fetch('https://backend-openai.onrender.com/api/v1/post', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ ...form }),

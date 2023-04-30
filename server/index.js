@@ -25,7 +25,7 @@ const callServer = async () => {
 	try {
 		// yaha p hmne mongodbUrl ko env m set kia h aur uspe atlas s hm apna database k cluster connect kie h
 		connectDb(process.env.MONGODB_URL);
-		app.listen(8000, () => console.log('Connected to server at http://localhost:8000'));
+		app.listen(8000, () => console.log('Connected to server at https://backend-openai.onrender.com'));
 	} catch (error) {
 		console.log(error);
 	}
